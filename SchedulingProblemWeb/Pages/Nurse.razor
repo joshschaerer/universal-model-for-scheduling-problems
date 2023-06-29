@@ -1,0 +1,15 @@
+@using SchedulingProblemWeb.Components
+@using SchedulingProblem.Model
+@using SchedulingProblem.Scenarios
+@page "/Nurse"
+
+<PageTitle>Nurse Scheduling Problem Example</PageTitle>
+
+<h2>Nurse Example</h2>
+
+<ScenarioComponent S = "@S"/>
+
+@code
+{
+    Scenario S = NurseSchedulingProblem.SpitalMuri();
+}

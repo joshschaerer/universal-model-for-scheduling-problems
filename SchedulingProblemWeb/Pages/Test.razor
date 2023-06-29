@@ -1,0 +1,13 @@
+@using SchedulingProblem.Scenarios
+@using SchedulingProblem.Model
+@using SchedulingProblemWeb.Components
+@page "/test"
+<PageTitle>Test Example</PageTitle>
+
+<h2>Test Example</h2>
+
+<ScenarioComponent S="@S" />
+
+@code {
+    private Scenario S = TestScenario.ProblemOne();
+}

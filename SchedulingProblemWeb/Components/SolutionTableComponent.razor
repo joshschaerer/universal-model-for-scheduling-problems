@@ -1,0 +1,57 @@
+﻿@using SchedulingProblem.Model
+@if (LocationId == CurrentLocationId)
+{
+    <div class="table-responsive" style="max-height: 90vh">
+
+        <table class="table table-light w-auto" style="border-collapse: separate; margin-bottom: 0;">
+            <thead style="position: sticky; top: 0; z-index: 2;">
+                <tr>
+                    <th scope="col" style="position: sticky; top: 0; left: 0; z-index: 3; border-right: 1px solid black;">
+                        Person</th>
+                    @foreach (var timeSlot in S.TimeSlots)
+                    {
+                        <th scope="col" class="border-1">@timeSlot.Description</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @for (var personId = 0; personId < S.People.Count; personId++)
+                {
+                    <tr>
+                        <th scope="row" style="position: sticky; left: 0; z-index: 1; border-right: 1px solid black;">
+                            @S.People[personId].Name</th>
+                        @for (var timeSlotId = 0; timeSlotId < S.TimeSlots.Count; timeSlotId++)
+                        {
+                            @if (!S.People[personId].Absences.Contains(timeSlotId))
+                            {
+                                <td class="border-1">
+                                    @for (var taskId = 0; taskId < S.Tasks.Count; taskId++)
+                                    {
+                                        if (@result.Item2[personId][timeSlotId].Length <= taskId) continue;
+                                        if (@result.Item2[personId][timeSlotId][taskId].Length <= LocationId) continue;
+                                        if (@result.Item2[personId][timeSlotId][taskId][LocationId])
+                                            @S.Tasks[taskId].Description
+                                        ;
+                                    }
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="border-1 table-danger">
+                                    x
+                                </td>
+                            }
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    [Parameter] public Scenario S { get; set; }
+    [Parameter] public (int, bool[][][][], string) result { get; set; }
+    [Parameter] public int LocationId { get; set; }
+    [Parameter] public int CurrentLocationId { get; set; }
+}

@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>SchedulingProblem</RootNamespace>
+        <Configurations>Debug;Release;Benchmark</Configurations>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="gurobi95.netstandard20" />
+        <None Remove="deiruch.SATInterface" />
+        <None Remove="DecisionDiagrams" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="deiruch.SATInterface" Version="4.8.3" />
+        <PackageReference Include="DecisionDiagrams" Version="1.2.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="lib\" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="gurobi95.netstandard20">
+            <HintPath>..\gurobi95.netstandard20.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="Scenarios\nurse-small.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Scenarios\course-small.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Scenarios\presentation-small.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Scenarios\nurse-medium.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Scenarios\course-medium.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Scenarios\presentation-medium.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Scenarios\nurse-big.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Scenarios\course-big.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="Scenarios\presentation-big.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+</Project>

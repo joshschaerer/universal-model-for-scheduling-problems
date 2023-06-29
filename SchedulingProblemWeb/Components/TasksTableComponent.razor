@@ -1,0 +1,77 @@
+﻿@using SchedulingProblem.Model
+
+<div class="table-responsive">
+    <table class="table w-auto">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Description</th>
+                @if (HasRepetitions)
+                {
+                    <th scope="col">Rep.</th>
+                }
+                @if (PrefNrOfPeopleWeight > 0)
+                {
+	                <th scope="col">Preferred nr of people</th>
+                }
+                @if (HasReqNrOfPpl)
+                {
+                    <th scope="col">Required nr of people</th>
+                }
+                @if (HasReqPeople)
+                {
+                    <th scope="col">Specific people</th>
+                }
+                @if (HasReqTS)
+                {
+                    <th scope="col">Specific time slots</th>
+                }
+                @if (HasReqLoc)
+                {
+                    <th scope="col">Specific locations</th>
+                }
+                @if (HasSkills)
+                {
+                    <th scope="col">Skills</th>
+                }
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Tasks)
+            {
+                <TaskTableRowComponent Task="task" DeleteMethod="DeleteTask" HasRepetitions="@HasRepetitions" PrefNrOfPeopleWeight="@PrefNrOfPeopleWeight"
+                HasReqNrOfPpl="@HasReqNrOfPpl" HasReqPeople="@HasReqPeople" HasReqTS="@HasReqTS" HasReqLoc="@HasReqLoc"
+                HasSkills="@HasSkills" />
+            }
+            <tr>
+                <td>
+                    <input type="button" id="taskAdd" class="btn btn-success" value="+" @onclick="AddTask">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@code {
+    [Parameter] public List<SchedulingTask>? Tasks { get; set; }
+
+    [Parameter] public bool HasRepetitions { get; set; }
+    [Parameter] public int PrefNrOfPeopleWeight { get; set; }
+    [Parameter] public bool HasReqNrOfPpl { get; set; }
+    [Parameter] public bool HasReqPeople { get; set; }
+    [Parameter] public bool HasReqTS { get; set; }
+    [Parameter] public bool HasReqLoc { get; set; }
+    [Parameter] public bool HasSkills { get; set; }
+
+    private void AddTask()
+    {
+        Tasks.Add(new SchedulingTask(Tasks.Count, "", 1, 1, new int[] { }, new int[] { }, new int[] { }));
+    }
+
+    private void DeleteTask(int id)
+    {
+        Tasks.Remove(Tasks.First(t => t.Id == id));
+    }
+
+}

@@ -1,0 +1,16 @@
+@using SchedulingProblemWeb.Components
+@using SchedulingProblem.Model
+@using SchedulingProblem.Scenarios
+@page "/presentation"
+
+<PageTitle>Presentation Scheduling Problem Example</PageTitle>
+
+<h2>Presentation Example</h2>
+
+<ScenarioComponent S="@S" />
+
+@code
+
+{
+    Scenario S = PresentationSchedulingProblem.FMSBasel();
+}

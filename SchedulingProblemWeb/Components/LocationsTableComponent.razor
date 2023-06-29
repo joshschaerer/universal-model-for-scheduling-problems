@@ -1,0 +1,46 @@
+﻿@using SchedulingProblem.Model
+
+<div class="table-responsive">
+    <table class="table w-auto">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                @if (HasSkills)
+                {
+                    <th scope="col">Skills</th>
+                }
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var location in Locations)
+            {
+                <LocationTableRowComponent Location="location" DeleteMethod="DeleteLocation" HasSkills="@HasSkills"/>
+            }
+            <tr>
+                <td>
+                    <input type="button" id="locationAdd" class="btn btn-success" value="+" @onclick="AddLocation">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@code {
+    [Parameter] public List<Location> Locations { get; set; }
+
+    [Parameter] public bool HasSkills { get; set; }
+
+
+    private void AddLocation()
+    {
+        Locations.Add(new Location(Locations.Count, "", new int[] { }));
+    }
+
+    private void DeleteLocation(int id)
+    {
+        Locations.Remove(Locations.First(l => l.Id == id));
+    }
+
+}

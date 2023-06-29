@@ -1,0 +1,1119 @@
+{
+  "People": [
+    {
+      "id": 0,
+      "name": "Magdalen Esterbrook",
+      "absences": [
+        40,
+        18
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Dru Trudgian",
+      "absences": [
+        23,
+        33,
+        29,
+        17,
+        9,
+        27,
+        12,
+        47,
+        2,
+        3,
+        26,
+        2,
+        27,
+        7,
+        11,
+        9,
+        48,
+        35,
+        42,
+        42,
+        48
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Kerby Matchitt",
+      "absences": [
+        35,
+        2,
+        1,
+        44,
+        44,
+        22,
+        33,
+        33,
+        46,
+        35,
+        5,
+        29,
+        33,
+        15
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sharon Wilcot",
+      "absences": [
+        12,
+        10,
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Silvana O'Kieran",
+      "absences": [
+        14,
+        3,
+        27,
+        23,
+        3,
+        21,
+        15,
+        35,
+        29,
+        38,
+        28,
+        5,
+        34,
+        42,
+        32,
+        18,
+        1,
+        42
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Lian Sailor",
+      "absences": [
+        38,
+        29,
+        30,
+        21
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Neville Maureen",
+      "absences": [
+        33,
+        11,
+        27,
+        39,
+        44,
+        18,
+        43,
+        40,
+        23,
+        26,
+        32,
+        41,
+        21,
+        29,
+        28,
+        36,
+        36,
+        32,
+        7,
+        6,
+        4,
+        6,
+        1,
+        18,
+        49
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Jeannine Langhor",
+      "absences": [
+        31,
+        6,
+        0,
+        15,
+        28,
+        46,
+        14,
+        14,
+        0,
+        4,
+        19,
+        29,
+        26,
+        33,
+        29,
+        24,
+        20
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Abbe Easlea",
+      "absences": [
+        10,
+        6,
+        27,
+        11,
+        35,
+        24,
+        25,
+        27,
+        15,
+        7,
+        43,
+        18,
+        45,
+        27,
+        33,
+        40,
+        1,
+        4,
+        30,
+        17,
+        0
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Desmond Lindberg",
+      "absences": [
+        27,
+        39
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Aron Scatchar",
+      "absences": [
+        13,
+        32,
+        49,
+        36,
+        4,
+        32,
+        19,
+        24,
+        24,
+        12
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Delila MacEllen",
+      "absences": [
+        4,
+        7,
+        0,
+        44,
+        25,
+        16,
+        28,
+        28,
+        21,
+        6,
+        35,
+        21,
+        32,
+        41,
+        6,
+        23,
+        23,
+        7,
+        29,
+        4,
+        2,
+        40
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Karisa Fromant",
+      "absences": [
+        41,
+        35,
+        26,
+        12,
+        32,
+        33,
+        23,
+        14,
+        9,
+        48,
+        2,
+        33
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Patrizia Tyce",
+      "absences": [
+        26,
+        15,
+        11
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Elbert Blackburne",
+      "absences": [
+        6,
+        25,
+        9,
+        15,
+        44,
+        14,
+        46,
+        40,
+        22,
+        49
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Marc Janiszewski",
+      "absences": [
+        0,
+        9,
+        40
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Brana Nunnery",
+      "absences": [
+        40,
+        6,
+        20,
+        11,
+        18,
+        24,
+        14,
+        1,
+        13,
+        7,
+        12,
+        11,
+        6,
+        24,
+        37,
+        35,
+        34,
+        46,
+        30,
+        40,
+        34,
+        4,
+        16,
+        38
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Wylma Bellin",
+      "absences": [
+        8,
+        39,
+        12,
+        11,
+        43,
+        40,
+        35,
+        12,
+        9,
+        35,
+        3,
+        22,
+        38,
+        19,
+        18
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Gwenore Bagby",
+      "absences": [
+        12,
+        23,
+        17,
+        36,
+        46,
+        38
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Nedi Kilmary",
+      "absences": [
+        9,
+        47,
+        13,
+        17,
+        31,
+        44,
+        19,
+        38,
+        14,
+        23,
+        5,
+        19,
+        34
+      ]
+    }
+  ],
+  "TimeSlots": [
+    {
+      "id": 0,
+      "description": "2022-01-01"
+    },
+    {
+      "id": 1,
+      "description": "2022-01-02"
+    },
+    {
+      "id": 2,
+      "description": "2022-01-03"
+    },
+    {
+      "id": 3,
+      "description": "2022-01-04"
+    },
+    {
+      "id": 4,
+      "description": "2022-01-05"
+    },
+    {
+      "id": 5,
+      "description": "2022-01-06"
+    },
+    {
+      "id": 6,
+      "description": "2022-01-07"
+    },
+    {
+      "id": 7,
+      "description": "2022-01-08"
+    },
+    {
+      "id": 8,
+      "description": "2022-01-09"
+    },
+    {
+      "id": 9,
+      "description": "2022-01-10"
+    },
+    {
+      "id": 10,
+      "description": "2022-01-11"
+    },
+    {
+      "id": 11,
+      "description": "2022-01-12"
+    },
+    {
+      "id": 12,
+      "description": "2022-01-13"
+    },
+    {
+      "id": 13,
+      "description": "2022-01-14"
+    },
+    {
+      "id": 14,
+      "description": "2022-01-15"
+    },
+    {
+      "id": 15,
+      "description": "2022-01-16"
+    },
+    {
+      "id": 16,
+      "description": "2022-01-17"
+    },
+    {
+      "id": 17,
+      "description": "2022-01-18"
+    },
+    {
+      "id": 18,
+      "description": "2022-01-19"
+    },
+    {
+      "id": 19,
+      "description": "2022-01-20"
+    },
+    {
+      "id": 20,
+      "description": "2022-01-21"
+    },
+    {
+      "id": 21,
+      "description": "2022-01-22"
+    },
+    {
+      "id": 22,
+      "description": "2022-01-23"
+    },
+    {
+      "id": 23,
+      "description": "2022-01-24"
+    },
+    {
+      "id": 24,
+      "description": "2022-01-25"
+    },
+    {
+      "id": 25,
+      "description": "2022-01-26"
+    },
+    {
+      "id": 26,
+      "description": "2022-01-27"
+    },
+    {
+      "id": 27,
+      "description": "2022-01-28"
+    },
+    {
+      "id": 28,
+      "description": "2022-01-29"
+    },
+    {
+      "id": 29,
+      "description": "2022-01-30"
+    },
+    {
+      "id": 30,
+      "description": "2022-01-31"
+    },
+    {
+      "id": 31,
+      "description": "2022-02-01"
+    },
+    {
+      "id": 32,
+      "description": "2022-02-02"
+    },
+    {
+      "id": 33,
+      "description": "2022-02-03"
+    },
+    {
+      "id": 34,
+      "description": "2022-02-04"
+    },
+    {
+      "id": 35,
+      "description": "2022-02-05"
+    },
+    {
+      "id": 36,
+      "description": "2022-02-06"
+    },
+    {
+      "id": 37,
+      "description": "2022-02-07"
+    },
+    {
+      "id": 38,
+      "description": "2022-02-08"
+    },
+    {
+      "id": 39,
+      "description": "2022-02-09"
+    },
+    {
+      "id": 40,
+      "description": "2022-02-10"
+    },
+    {
+      "id": 41,
+      "description": "2022-02-11"
+    },
+    {
+      "id": 42,
+      "description": "2022-02-12"
+    },
+    {
+      "id": 43,
+      "description": "2022-02-13"
+    },
+    {
+      "id": 44,
+      "description": "2022-02-14"
+    },
+    {
+      "id": 45,
+      "description": "2022-02-15"
+    },
+    {
+      "id": 46,
+      "description": "2022-02-16"
+    },
+    {
+      "id": 47,
+      "description": "2022-02-17"
+    },
+    {
+      "id": 48,
+      "description": "2022-02-18"
+    },
+    {
+      "id": 49,
+      "description": "2022-02-19"
+    }
+  ],
+  "Tasks": [
+    {
+      "id": 0,
+      "description": "Make Lo Loestrin Fe",
+      "reps": 1
+    },
+    {
+      "id": 1,
+      "description": "Make Motto",
+      "reps": 3
+    },
+    {
+      "id": 2,
+      "description": "Make Cimetidine",
+      "reps": 7
+    },
+    {
+      "id": 3,
+      "description": "Make Trazodone Hydrochloride",
+      "reps": 8
+    },
+    {
+      "id": 4,
+      "description": "Make Naproxen",
+      "reps": 8
+    },
+    {
+      "id": 5,
+      "description": "Make Day Time Night Time",
+      "reps": 10
+    },
+    {
+      "id": 6,
+      "description": "Make Sulfasalazine",
+      "reps": 3
+    },
+    {
+      "id": 7,
+      "description": "Make Lanacane First Aid",
+      "reps": 7
+    },
+    {
+      "id": 8,
+      "description": "Make SMART SENSE",
+      "reps": 5
+    },
+    {
+      "id": 9,
+      "description": "Make GUNA-IGF",
+      "reps": 10
+    },
+    {
+      "id": 10,
+      "description": "Make acid reducer",
+      "reps": 8
+    },
+    {
+      "id": 11,
+      "description": "Make Phenergan",
+      "reps": 10
+    },
+    {
+      "id": 12,
+      "description": "Make Retin-A",
+      "reps": 4
+    },
+    {
+      "id": 13,
+      "description": "Make ALDACTAZIDE",
+      "reps": 9
+    },
+    {
+      "id": 14,
+      "description": "Make Hydroxychloroquine Sulfate",
+      "reps": 5
+    },
+    {
+      "id": 15,
+      "description": "Make Burr Oak",
+      "reps": 7
+    },
+    {
+      "id": 16,
+      "description": "Make Morning Fresh",
+      "reps": 1
+    },
+    {
+      "id": 17,
+      "description": "Make members mark hydrocortisone",
+      "reps": 10
+    },
+    {
+      "id": 18,
+      "description": "Make Aspiera Wound Care and Antiseptic",
+      "reps": 2
+    },
+    {
+      "id": 19,
+      "description": "Make Penicillin V Potassium",
+      "reps": 4
+    },
+    {
+      "id": 20,
+      "description": "Make Isopropyl alcohol",
+      "reps": 5
+    },
+    {
+      "id": 21,
+      "description": "Make Migraine Headache Relief",
+      "reps": 2
+    },
+    {
+      "id": 22,
+      "description": "Make Ofloxacin",
+      "reps": 2
+    },
+    {
+      "id": 23,
+      "description": "Make Cutiecaine",
+      "reps": 6
+    },
+    {
+      "id": 24,
+      "description": "Make Citalopram",
+      "reps": 3
+    },
+    {
+      "id": 25,
+      "description": "Make NERVE TONIC STRESS RELIEF",
+      "reps": 3
+    },
+    {
+      "id": 26,
+      "description": "Make AMARANTHUS RETROFLEXUS POLLEN",
+      "reps": 2
+    },
+    {
+      "id": 27,
+      "description": "Make LBEL EFFET PARFAIT DUAL-USE COMPACT YOUTHFUL LOOKING SKIN SPF7",
+      "reps": 1
+    },
+    {
+      "id": 28,
+      "description": "Make Detrol",
+      "reps": 3
+    },
+    {
+      "id": 29,
+      "description": "Make Artists Touch BB 02 Medium",
+      "reps": 4
+    },
+    {
+      "id": 30,
+      "description": "Make Softlips Intense Moisture Double Mint",
+      "reps": 6
+    },
+    {
+      "id": 31,
+      "description": "Make Dilatrate",
+      "reps": 10
+    },
+    {
+      "id": 32,
+      "description": "Make Morphine Sulfate",
+      "reps": 10
+    },
+    {
+      "id": 33,
+      "description": "Make Thyrostat",
+      "reps": 9
+    },
+    {
+      "id": 34,
+      "description": "Make IMITREX",
+      "reps": 10
+    },
+    {
+      "id": 35,
+      "description": "Make Morphine Sulfate",
+      "reps": 4
+    },
+    {
+      "id": 36,
+      "description": "Make SPF 50",
+      "reps": 1
+    },
+    {
+      "id": 37,
+      "description": "Make DIFFERIN",
+      "reps": 3
+    },
+    {
+      "id": 38,
+      "description": "Make Lisinopril with Hydrochlorothiazide",
+      "reps": 1
+    },
+    {
+      "id": 39,
+      "description": "Make Warfarin Sodium",
+      "reps": 9
+    },
+    {
+      "id": 40,
+      "description": "Make Whole Wheat Grain",
+      "reps": 7
+    },
+    {
+      "id": 41,
+      "description": "Make Glipizide",
+      "reps": 6
+    },
+    {
+      "id": 42,
+      "description": "Make DR. IASO POWER 23",
+      "reps": 8
+    },
+    {
+      "id": 43,
+      "description": "Make Junior Pain Relief",
+      "reps": 9
+    },
+    {
+      "id": 44,
+      "description": "Make SyResp",
+      "reps": 2
+    },
+    {
+      "id": 45,
+      "description": "Make Hydralazine Hydrochloride",
+      "reps": 3
+    },
+    {
+      "id": 46,
+      "description": "Make Delsym",
+      "reps": 1
+    },
+    {
+      "id": 47,
+      "description": "Make Dove Clinical Protection Original Clean",
+      "reps": 10
+    },
+    {
+      "id": 48,
+      "description": "Make CVS Fast Acting Baby Teething",
+      "reps": 7
+    },
+    {
+      "id": 49,
+      "description": "Make Select-OB Plus DHA",
+      "reps": 3
+    },
+    {
+      "id": 50,
+      "description": "Make Diphenhydramine Hydrochloride",
+      "reps": 5
+    },
+    {
+      "id": 51,
+      "description": "Make Phenazopyridine Hydrochloride",
+      "reps": 1
+    },
+    {
+      "id": 52,
+      "description": "Make ECOSAVE GRAPEFRUIT AND LEMONGRASS SOAP ANTIBACTERIAL HAND SOAP",
+      "reps": 4
+    },
+    {
+      "id": 53,
+      "description": "Make HAMSOA YUYU DERMA119",
+      "reps": 8
+    },
+    {
+      "id": 54,
+      "description": "Make Mosquito",
+      "reps": 6
+    },
+    {
+      "id": 55,
+      "description": "Make Kindest Kare Foam",
+      "reps": 5
+    },
+    {
+      "id": 56,
+      "description": "Make LICE ICE",
+      "reps": 6
+    },
+    {
+      "id": 57,
+      "description": "Make Carnitor SF",
+      "reps": 2
+    },
+    {
+      "id": 58,
+      "description": "Make Bupivacaine Hydrochloride",
+      "reps": 10
+    },
+    {
+      "id": 59,
+      "description": "Make Hydroxychloroquine Sulfate",
+      "reps": 9
+    },
+    {
+      "id": 60,
+      "description": "Make SHISEIDO ADVANCED HYDRO-LIQUID COMPACT (REFILL)",
+      "reps": 8
+    },
+    {
+      "id": 61,
+      "description": "Make Astragalus e rad. 3",
+      "reps": 7
+    },
+    {
+      "id": 62,
+      "description": "Make SulwhasooSNOWISE BRIGHTENING SERUM BB",
+      "reps": 8
+    },
+    {
+      "id": 63,
+      "description": "Make Lamotrigine",
+      "reps": 8
+    },
+    {
+      "id": 64,
+      "description": "Make Natures Gate",
+      "reps": 9
+    },
+    {
+      "id": 65,
+      "description": "Make Bacsode",
+      "reps": 10
+    },
+    {
+      "id": 66,
+      "description": "Make Omeprazole",
+      "reps": 10
+    },
+    {
+      "id": 67,
+      "description": "Make ShopRite Ibuprofen",
+      "reps": 2
+    },
+    {
+      "id": 68,
+      "description": "Make Benztropine Mesylate",
+      "reps": 7
+    },
+    {
+      "id": 69,
+      "description": "Make Doxepin Hydrochloride",
+      "reps": 1
+    },
+    {
+      "id": 70,
+      "description": "Make Haloperidol Decanoate",
+      "reps": 9
+    },
+    {
+      "id": 71,
+      "description": "Make Sore Muscle and Joint Relief",
+      "reps": 5
+    },
+    {
+      "id": 72,
+      "description": "Make SODIUM SULFACETAMIDE",
+      "reps": 10
+    },
+    {
+      "id": 73,
+      "description": "Make Losartan Potassium",
+      "reps": 1
+    },
+    {
+      "id": 74,
+      "description": "Make Sinutone",
+      "reps": 6
+    },
+    {
+      "id": 75,
+      "description": "Make Shimmery Sun",
+      "reps": 10
+    },
+    {
+      "id": 76,
+      "description": "Make Jock Itch",
+      "reps": 3
+    },
+    {
+      "id": 77,
+      "description": "Make Donatuss",
+      "reps": 9
+    },
+    {
+      "id": 78,
+      "description": "Make verapamil hydrochloride",
+      "reps": 9
+    },
+    {
+      "id": 79,
+      "description": "Make Alcohol Prep Pad",
+      "reps": 8
+    },
+    {
+      "id": 80,
+      "description": "Make Alora",
+      "reps": 6
+    },
+    {
+      "id": 81,
+      "description": "Make Isopropyl alcohol",
+      "reps": 6
+    },
+    {
+      "id": 82,
+      "description": "Make Dipyridamole",
+      "reps": 10
+    },
+    {
+      "id": 83,
+      "description": "Make zaleplon",
+      "reps": 4
+    },
+    {
+      "id": 84,
+      "description": "Make Cymbalta",
+      "reps": 2
+    },
+    {
+      "id": 85,
+      "description": "Make Lomustine",
+      "reps": 4
+    },
+    {
+      "id": 86,
+      "description": "Make Quality Choice day time severe cold and cough",
+      "reps": 10
+    },
+    {
+      "id": 87,
+      "description": "Make Burn Out SPF-30 Sunscreen",
+      "reps": 9
+    },
+    {
+      "id": 88,
+      "description": "Make Daytime Cold and Flu Relief",
+      "reps": 8
+    },
+    {
+      "id": 89,
+      "description": "Make Lorcet Plus",
+      "reps": 7
+    },
+    {
+      "id": 90,
+      "description": "Make DiorSkin Nude 020 Light Beige",
+      "reps": 3
+    },
+    {
+      "id": 91,
+      "description": "Make Old Spice High Endurance",
+      "reps": 2
+    },
+    {
+      "id": 92,
+      "description": "Make Fluconazole",
+      "reps": 5
+    },
+    {
+      "id": 93,
+      "description": "Make UNASYN",
+      "reps": 6
+    },
+    {
+      "id": 94,
+      "description": "Make amoxicillin and clavulanate potassium",
+      "reps": 8
+    },
+    {
+      "id": 95,
+      "description": "Make Keflex",
+      "reps": 5
+    },
+    {
+      "id": 96,
+      "description": "Make Pollens - Trees, Pecan Carya Carya illinoensis",
+      "reps": 2
+    },
+    {
+      "id": 97,
+      "description": "Make Capecitabine",
+      "reps": 1
+    },
+    {
+      "id": 98,
+      "description": "Make Megestrol Acetate",
+      "reps": 4
+    },
+    {
+      "id": 99,
+      "description": "Make Aorta Belladonna",
+      "reps": 9
+    }
+  ],
+  "Locations": [
+    {
+      "id": 0,
+      "name": "Room leo odio"
+    },
+    {
+      "id": 1,
+      "name": "Room posuere metus vitae"
+    },
+    {
+      "id": 2,
+      "name": "Room convallis morbi odio"
+    },
+    {
+      "id": 3,
+      "name": "Room et"
+    },
+    {
+      "id": 4,
+      "name": "Room congue elementum"
+    },
+    {
+      "id": 5,
+      "name": "Room sit amet turpis"
+    },
+    {
+      "id": 6,
+      "name": "Room nulla"
+    },
+    {
+      "id": 7,
+      "name": "Room nullam"
+    },
+    {
+      "id": 8,
+      "name": "Room sit"
+    },
+    {
+      "id": 9,
+      "name": "Room aliquam erat volutpat"
+    }
+  ],
+  "HasAbsences": true,
+  "HasRepetitions": true,
+  "WageWeight": 1,
+  "FairnessWeight": 1
+}

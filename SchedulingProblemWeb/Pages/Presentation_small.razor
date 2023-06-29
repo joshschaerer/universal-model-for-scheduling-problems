@@ -1,0 +1,16 @@
+@using SchedulingProblem.Scenarios
+@using SchedulingProblem.Model
+@using SchedulingProblemWeb.Components
+@page "/smallpres"
+<PageTitle>Test Example</PageTitle>
+
+<h2>Test Example</h2>
+
+<ScenarioComponent S="@S" />
+
+@code {
+
+
+
+    private Scenario S = JSONParser.GetPresentationSmall();
+}

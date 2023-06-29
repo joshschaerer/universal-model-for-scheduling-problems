@@ -1,0 +1,300 @@
+{
+  "People": [
+    {
+      "id": 0,
+      "name": "Alvina Crawshaw",
+      "absences": []
+    },
+    {
+      "id": 1,
+      "name": "Penny Eisikovitsh",
+      "absences": []
+    },
+    {
+      "id": 2,
+      "name": "Kayla Boltwood",
+      "absences": [ 0, 5, 3 ]
+    },
+    {
+      "id": 3,
+      "name": "Orran Maddra",
+      "absences": [ 9, 9, 0 ]
+    },
+    {
+      "id": 4,
+      "name": "Dietrich Fleckness",
+      "absences": [ 4, 2, 6 ]
+    },
+    {
+      "id": 5,
+      "name": "Mildrid Feldberger",
+      "absences": [ 8, 2, 3, 5, 0 ]
+    },
+    {
+      "id": 6,
+      "name": "Sukey Kindleside",
+      "absences": [ 5, 9 ]
+    },
+    {
+      "id": 7,
+      "name": "Gloriana Perulli",
+      "absences": []
+    },
+    {
+      "id": 8,
+      "name": "Pen McMeeking",
+      "absences": [ 8, 3, 0, 4, 8 ]
+    },
+    {
+      "id": 9,
+      "name": "Klement Villa",
+      "absences": [ 4, 1 ]
+    }
+  ],
+  "TimeSlots": [
+    {
+      "id": 0,
+      "description": "2022-01-01"
+    },
+    {
+      "id": 1,
+      "description": "2022-01-02"
+    },
+    {
+      "id": 2,
+      "description": "2022-01-03"
+    },
+    {
+      "id": 3,
+      "description": "2022-01-04"
+    },
+    {
+      "id": 4,
+      "description": "2022-01-05"
+    },
+    {
+      "id": 5,
+      "description": "2022-01-06"
+    },
+    {
+      "id": 6,
+      "description": "2022-01-07"
+    },
+    {
+      "id": 7,
+      "description": "2022-01-08"
+    },
+    {
+      "id": 8,
+      "description": "2022-01-09"
+    },
+    {
+      "id": 9,
+      "description": "2022-01-10"
+    }
+  ],
+  "Tasks": [
+    {
+      "id": 0,
+      "description": "Praesent lectus.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        1,
+        8
+      ],
+      "skills": [
+        3
+      ]
+    },
+    {
+      "id": 1,
+      "description": "Proin risus.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        2,
+        5
+      ],
+      "skills": [
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Suspendisse potenti.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        5,
+        8
+      ],
+      "skills": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Proin eu mi.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        3,
+        1
+      ],
+      "skills": [
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Integer a nibh.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        1,
+        2
+      ],
+      "skills": [
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Duis aliquam convallis nunc.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        4,
+        9
+      ],
+      "skills": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        3,
+        9
+      ],
+      "skills": [
+        2
+      ]
+    },
+    {
+      "id": 7,
+      "description": "In congue.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        2,
+        9
+      ],
+      "skills": [
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "description": "In eleifend quam a odio.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        1,
+        7
+      ],
+      "skills": [
+        4
+      ]
+    },
+    {
+      "id": 9,
+      "description": "Etiam faucibus cursus urna.",
+      "reqPpl": 2,
+      "reqSpecPpl": [
+        7,
+        9
+      ],
+      "skills": [
+        4
+      ]
+    }
+  ],
+  "Locations": [
+    {
+      "id": 0,
+      "name": "Road",
+      "skills": [ 4 ]
+    },
+    {
+      "id": 1,
+      "name": "Plaza",
+      "skills": [ 3 ]
+    },
+    {
+      "id": 2,
+      "name": "Junction",
+      "skills": [ 3 ]
+    },
+    {
+      "id": 3,
+      "name": "Alley",
+      "skills": [ 3 ]
+    },
+    {
+      "id": 4,
+      "name": "Plaza",
+      "skills": [ 2 ]
+    },
+    {
+      "id": 5,
+      "name": "Park",
+      "skills": [ 3 ]
+    },
+    {
+      "id": 6,
+      "name": "Court",
+      "skills": [ 1 ]
+    },
+    {
+      "id": 7,
+      "name": "Center",
+      "skills": [ 2 ]
+    },
+    {
+      "id": 8,
+      "name": "Pass",
+      "skills": [ 0 ]
+    },
+    {
+      "id": 9,
+      "name": "Park",
+      "skills": [ 0 ]
+    }
+  ],
+  "Skills": [
+    {
+      "id": 0,
+      "name": "Staff Accountant I"
+    },
+    {
+      "id": 1,
+      "name": "Paralegal"
+    },
+    {
+      "id": 2,
+      "name": "Statistician III"
+    },
+    {
+      "id": 3,
+      "name": "Financial Advisor"
+    },
+    {
+      "id": 4,
+      "name": "Design Engineer"
+    }
+
+  ],
+  "HasAbsences": true,
+  "HasReqNrOfPpl": true,
+  "HasReqPeople": true,
+  "HasSkills": true,
+  "WageWeight": 1,
+  "MinTSWeight": 1,
+  "MinLocWeight": 1
+}

@@ -1,0 +1,95 @@
+﻿@using SchedulingProblem.Model
+@using System.ComponentModel.DataAnnotations
+
+<tr>
+    <td>
+        <input type="text" name="personId" id="personId" value="@Person.Id" disabled>
+    </td>
+	<td>
+		<input type="text" id="personName" @bind-value="@Person.Name" placeholder='Ex. "John Doe"'>
+	</td>
+    @if (WorkloadWeight > 0)
+    {
+	    <td>
+		    <input type="number" id="personWorkload" @bind-value="@Person.Workload" min="0" max="¨100">
+	    </td>
+    }
+    @if (HasAbsences)
+    {
+        <td>
+            <input type="text" id="personAbsences" @bind-value="@Absences" placeholder='Ex. "0, 4, 9"'>
+        </td>
+    }
+    @if (HasSkills)
+    {
+        <td>
+            <input type="text" id="personSkills" @bind-value="@Skills" placeholder='Ex. "1, 2, 5"'>
+        </td>
+    }
+    @if (WageWeight > 0)
+    {
+	    <td>
+		    <input type="number" id="personWage" @bind-value="@Person.Wage" min="1">
+	    </td>
+    }
+    @if (HasCapacity)
+    {
+        <td>
+            <input type="number" id="personCapacityPerTimeSlot" @bind-value="@Person.Capacity" min="1">
+        </td>
+    }
+    <td>
+        <input type="button" id="personDelete" class="btn btn-danger" value="x"
+            @onclick="() => DeleteMethod.InvokeAsync(Person.Id)">
+    </td>
+</tr>
+
+@code {
+    [Parameter] public Person? Person { get; set; }
+    [Parameter] public EventCallback<int> DeleteMethod { get; set; }
+
+    [Parameter] public int WorkloadWeight { get; set; }
+    [Parameter] public bool HasAbsences { get; set; }
+
+    [Parameter] public bool HasCapacity { get; set; }
+    [Parameter] public int WageWeight { get; set; }
+    [Parameter] public bool HasSkills { get; set; }
+
+    [RegularExpression(@"[0 - 9] +\.?[0-9,]*")]
+    public string Skills
+    {
+        get => String.Join(",", Person.Skills.Select(s => s.ToString()));
+        set
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                var s = value.Split(',');
+                var l = new int[s.Length];
+                for (int i = 0; i < s.Length; i++)
+                {
+                    Int32.TryParse(s[i],out l[i]);
+                }
+                Person.Skills = l;
+            }
+        }
+    }
+
+    [RegularExpression(@"[0 - 9] +\.?[0-9,]*")]
+    public string Absences
+    {
+        get => String.Join(",", Person.Absences.Select(s => s.ToString()));
+        set
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                var s = value.Split(',');
+                var l = new int[s.Length];
+                for (int i = 0; i < s.Length; i++)
+                {
+	                Int32.TryParse(s[i],out l[i]);
+                }
+                Person.Absences = l;
+            }
+        }
+    }
+}

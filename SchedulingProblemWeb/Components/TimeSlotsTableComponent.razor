@@ -1,0 +1,39 @@
+﻿@using SchedulingProblem.Model
+
+<div class="table-responsive">
+	<table class="table w-auto">
+		<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Description</th>
+			<th></th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (var timeSlot in TimeSlots)
+		{
+			<TimeSlotTableRowComponent TimeSlot="timeSlot" DeleteMethod="DeleteTimeSlot" />
+		}
+		<tr>
+			<td>
+				<input type="button" id="timeSlotAdd" class="btn btn-success" value="+" @onclick="AddTimeSlot">
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+@code {
+    [Parameter]
+	public List<TimeSlot> TimeSlots{get;set;}
+
+	private void AddTimeSlot()
+	{
+		TimeSlots.Add(new TimeSlot(TimeSlots.Count, ""));
+	}
+
+	private void DeleteTimeSlot(int id)
+	{
+		TimeSlots.Remove(TimeSlots.First(t => t.Id == id));
+	}
+}

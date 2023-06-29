@@ -1,0 +1,17 @@
+﻿<div id="@Name-status">
+	<p>@Name</p>
+	
+	<div>
+		<input type="checkbox" name="cb-@Name-0" id="cb-@Name-0" checked="@VariablesDone" disabled>
+		<label for="cb-@Name-0">Create variables</label>
+		
+		<input type="checkbox" name="cb-@Name-1" id="cb-@Name-1" checked="@ConstraintsDone" disabled>
+		<label for="cb-@Name-1">Create constraints</label>
+	</div>
+</div>
+
+@code {
+	[Parameter] public string Name { get; set; }
+	[Parameter] public bool VariablesDone { get; set; }
+	[Parameter] public bool ConstraintsDone { get; set; }
+}

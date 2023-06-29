@@ -1,0 +1,39 @@
+﻿@using SchedulingProblem.Model
+<div class="table-responsive">
+    <table class="table w-auto">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var skill in Skills)
+            {
+                <SkillTableRowComponent Skill="skill" DeleteMethod="DeleteSkill" />
+            }
+            <tr>
+                <td>
+                    <input type="button" id="skillAdd" class="btn btn-success" value="+" @onclick="AddSkill">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@code {
+    [Parameter]
+    public List<Skill> Skills { get; set; }
+
+
+    private void AddSkill()
+    {
+        Skills.Add(new Skill(Skills.Count, ""));
+    }
+
+    private void DeleteSkill(int id)
+    {
+        Skills.Remove(Skills.First(x => x.Id == id));
+    }
+}

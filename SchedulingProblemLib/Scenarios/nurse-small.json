@@ -1,0 +1,223 @@
+{
+  "People": [
+    {
+      "id": 0,
+      "name": "Fletcher Ruddom",
+      "absences": [
+
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Gene Soares",
+      "absences": [
+        4,
+        2,
+        9,
+        6
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Astrix Flucker",
+      "absences": [
+
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Thorn Cunnah",
+      "absences": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Alessandra Olenichev",
+      "absences": [
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Silvester Casino",
+      "absences": [
+        6,
+        6,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Wayne McElory",
+      "absences": [
+        1,
+        7,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Clarence Jollands",
+      "absences": [
+
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Marice Mordie",
+      "absences": [
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Bary Birds",
+      "absences": [
+        4,
+        9,
+        0
+      ]
+    }
+  ],
+  "TimeSlots": [
+    {
+      "id": 0,
+      "description": "2022-01-01"
+    },
+    {
+      "id": 1,
+      "description": "2022-01-02"
+    },
+    {
+      "id": 2,
+      "description": "2022-01-03"
+    },
+    {
+      "id": 3,
+      "description": "2022-01-04"
+    },
+    {
+      "id": 4,
+      "description": "2022-01-05"
+    },
+    {
+      "id": 5,
+      "description": "2022-01-06"
+    },
+    {
+      "id": 6,
+      "description": "2022-01-07"
+    },
+    {
+      "id": 7,
+      "description": "2022-01-08"
+    },
+    {
+      "id": 8,
+      "description": "2022-01-09"
+    },
+    {
+      "id": 9,
+      "description": "2022-01-10"
+    }
+  ],
+  "Tasks": [
+    {
+      "id": 0,
+      "description": "Make ISAKNOX SUNCARE 365 ADVANCED SUN",
+      "reps": 2
+    },
+    {
+      "id": 1,
+      "description": "Make Famotidine",
+      "reps": 2
+    },
+    {
+      "id": 2,
+      "description": "Make Hydrocodone Bitartrate and Acetaminophen",
+      "reps": 1
+    },
+    {
+      "id": 3,
+      "description": "Make Metformin Hydrochloride",
+      "reps": 2
+    },
+    {
+      "id": 4,
+      "description": "Make Naltrexone Hydrochloride",
+      "reps": 2
+    },
+    {
+      "id": 5,
+      "description": "Make DEMEROL",
+      "reps": 1
+    },
+    {
+      "id": 6,
+      "description": "Make Valproic",
+      "reps": 2
+    },
+    {
+      "id": 7,
+      "description": "Make HYDROCODONE BITARTRATE AND ACETAMINOPHEN",
+      "reps": 1
+    },
+    {
+      "id": 8,
+      "description": "Make Topiramate",
+      "reps": 1
+    },
+    {
+      "id": 9,
+      "description": "Make Lamotrigine",
+      "reps": 1
+    }
+  ],
+  "Locations": [
+    {
+      "id": 0,
+      "name": "Room ipsum"
+    },
+    {
+      "id": 1,
+      "name": "Room vestibulum"
+    },
+    {
+      "id": 2,
+      "name": "Room vulputate justo"
+    },
+    {
+      "id": 3,
+      "name": "Room purus"
+    },
+    {
+      "id": 4,
+      "name": "Room nunc purus phasellus"
+    },
+    {
+      "id": 5,
+      "name": "Room felis"
+    },
+    {
+      "id": 6,
+      "name": "Room donec ut mauris"
+    },
+    {
+      "id": 7,
+      "name": "Room congue risus semper"
+    },
+    {
+      "id": 8,
+      "name": "Room risus dapibus augue"
+    },
+    {
+      "id": 9,
+      "name": "Room primis in"
+    }
+  ],
+  "HasAbsences": true,
+  "HasRepetitions": true,
+  "WageWeight": 1,
+  "FairnessWeight": 1
+}

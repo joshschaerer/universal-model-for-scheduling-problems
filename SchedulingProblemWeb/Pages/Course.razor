@@ -1,0 +1,15 @@
+@using SchedulingProblemWeb.Components
+@using SchedulingProblem.Model
+@using SchedulingProblem.Scenarios
+@page "/course"
+
+<PageTitle>Course Scheduling Problem Example</PageTitle>
+
+<h2>Course Example</h2>
+
+<ScenarioComponent S="@S" />
+
+@code
+{
+    Scenario S = CourseSchedulingProblem.small();
+}

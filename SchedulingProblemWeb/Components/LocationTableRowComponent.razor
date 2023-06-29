@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Components
+@using SchedulingProblem.Model
+
+<tr>
+    <td>
+        <input type="text" name="locationId" id="locationId" value="@Location.Id" disabled>
+    </td>
+    <td>
+        <input type="text" id="locationName" @bind-value="@Location.Name" placeholder='Ex. "Room .."'>
+    </td>
+    @if (HasSkills)
+    {
+        <td>
+            <input type="text" id="locationSkills" @bind-value="Skills" placeholder='Ex. "1, 2, 5"'>
+        </td>
+    }
+    <td>
+        <input type="button" id="locationDelete" class="btn btn-danger" value="x"
+            @onclick="() => DeleteMethod.InvokeAsync(Location.Id)">
+    </td>
+</tr>
+
+@code {
+    [Parameter] public Location? Location { get; set; }
+    [Parameter] public EventCallback<int> DeleteMethod { get; set; }
+    [Parameter] public bool HasSkills { get; set; }
+
+    public string Skills
+    {
+        get => String.Join(",", Location.Skills.Select(s => s.ToString()));
+        set
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                var s = value.Split(',');
+                var l = new int[s.Length];
+                for (int i = 0; i < s.Length; i++)
+                {
+                    l[i] = Int32.Parse(s[i]);
+                }
+                Location.Skills = l;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@using SchedulingProblem.Scenarios
+@using SchedulingProblem.Model
+@using SchedulingProblemWeb.Components
+@page "/mediumcourse"
+<PageTitle>Test Example</PageTitle>
+
+<h2>Course Medium</h2>
+
+<ScenarioComponent S="@S" />
+
+@code {
+
+
+
+
+
+
+
+    private Scenario S = JSONParser.GetCourseMedium();
+}

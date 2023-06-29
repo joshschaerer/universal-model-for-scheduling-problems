@@ -1,0 +1,94 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">SchedulingProblemWeb</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Custom Scenario
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="nurse">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Nurse Example
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="course">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Course Example
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="presentation">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Presentation Example
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="test">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Test Example
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="smallnurse">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Nurse_Small
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="smallcourse">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Course_Small
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="smallpres">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Pres Small
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="mediumnurse">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Nurse Medium
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="mediumcourse">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Course Medium
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="mediumpres">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Pres Medium
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="bignurse">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Nurse Big
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="bigcourse">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Course Big
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="bigpres">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Pres Big
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

@@ -1,0 +1,248 @@
+@using SchedulingProblem.Model
+@using SchedulingProblem.Solvers
+@using System.ComponentModel.DataAnnotations
+
+<div id="scenario" class="mb-2">
+    <div class="mt-5">
+        <div class="mt-3">
+            <input type="checkbox" id="hasSkills" @bind-value="@S.HasSkills" checked="@S.HasSkills" />
+            <label for="hasSkills">Scenario has skill based Constraints</label>
+        </div>
+        @if (S.HasSkills)
+        {
+            <h5 class="mt-3">Skill list</h5>
+            <SkillsTableComponent Skills="@S.Skills" />
+        }
+
+    </div>
+    <h3 class="mt-5">Base Parameters</h3>
+    <div id="variables">
+        <div class="mt-3">
+            <h5>People</h5>
+            <div class="mt-3">
+                <input type="number" id="wageWeight" @bind-value="@S.WageWeight" />
+                <label for="wageWeight">Weight for wages compared to other soft constraints</label>
+            </div>
+            <div class="mt-3">
+                <input type="number" id="workloadWeight" @bind-value="@S.FairnessWeight" />
+                <label for="workloadWeight">Weight for enforcing fairness, by equalizing workload deviation</label>
+            </div>
+            <div class="mt-3">
+                <input type="checkbox" id="hasAbsences" @bind-value="@S.HasAbsences" checked="@S.HasAbsences" />
+                <label for="hasAbsences">People can have absences</label>
+            </div>
+            <div class="mt-3">
+                <input type="checkbox" id="hasCapacity" @bind-value="@S.HasCapacity" checked="@S.HasCapacity" />
+                <label for="hasCapacity">People can work on more than one task in a timeslot</label>
+            </div>
+            <PeopleTableComponent People="@S.People" WorkloadWeight="@S.FairnessWeight" HasAbsences="@S.HasAbsences"
+                WageWeight="@S.WageWeight" HasCapacity="@S.HasCapacity" HasSkills="@S.HasSkills" />
+        </div>
+
+        <div class="mt-3">
+            <h5>Tasks</h5>
+            <div class="mt-3">
+                <input type="number" id="prefNrOfPeopleWeight" @bind-value="@S.PrefNrOfPeopleWeight" />
+                <label for="prefNrOfPeopleWeight">Weight for preferred number of people compared to other soft
+                    constraints</label>
+            </div>
+            <div class="mt-3">
+                <input type="checkbox" id="hasRepetitions" @bind-value="@S.HasRepetitions"
+                    checked="@S.HasRepetitions" />
+                <label for="hasRepetitions">Tasks can be repeated over the planning period</label>
+            </div>
+            <div class="mt-3">
+                <input type="checkbox" id="hasReqNrOfPpl" @bind-value="@S.HasReqNrOfPpl" checked="@S.HasReqNrOfPpl" />
+                <label for="hasReqNrOfPpl">Task can require a number of people to complete</label>
+            </div>
+            <div class="mt-3">
+                <input type="checkbox" id="hasReqPeople" @bind-value="@S.HasReqPeople" checked="@S.HasReqPeople" />
+                <label for="hasReqPeople">Task can require specific people to complete</label>
+            </div>
+            <div class="mt-3">
+                <input type="checkbox" id="hasReqTS" @bind-value="@S.HasReqTS" checked="@S.HasReqTS" />
+                <label for="hasReqTS">Task can specify time slots in which it has to be completed</label>
+            </div>
+            <div class="mt-3">
+                <input type="checkbox" id="hasReqLoc" @bind-value="@S.HasReqLoc" checked="@S.HasReqLoc" />
+                <label for="hasReqLoc">Task can specify locations in which it has to be completed</label>
+            </div>
+            <TasksTableComponent Tasks="@S.Tasks" HasRepetitions="@S.HasRepetitions"
+                PrefNrOfPeopleWeight="@S.PrefNrOfPeopleWeight" HasReqNrOfPpl="@S.HasReqNrOfPpl"
+                HasReqPeople="@S.HasReqPeople" HasReqTS="@S.HasReqTS" HasReqLoc="@S.HasReqLoc"
+                HasSkills="@S.HasSkills" />
+        </div>
+
+        <div class="mt-3">
+            <h5>Time slots</h5>
+	        <div class="mt-3">
+                <input type="number" id="minTSWeight" @bind-value="@S.minTSWeight" />
+                <label for="minTSWeight">Weight for minimize timeslots constraint, compared to other soft
+                    constraints</label>
+            </div>
+	        <TimeSlotsTableComponent TimeSlots="@S.TimeSlots" />
+        </div>
+
+        <div class="mt-3">
+            <h5>Locations</h5>
+	        <div class="mt-3">
+		        <input type="number" id="minLocsWeight" @bind-value="@S.minLocWeight" />
+		        <label for="minLocsWeight">Weight for minimizing number of rooms used, compared to other soft
+			        constraints</label>
+	        </div>
+	        <div class="mt-3">
+		        <input type="number" id="travelCostWeight" @bind-value="@S.TravelCostWeight" />
+		        <label for="travelCostWeight">Weight for the travel costs for each person to a location</label>
+	        </div>
+
+	        <LocationsTableComponent Locations="@S.Locations" HasSkills="@S.HasSkills" />
+
+            @if (S.TravelCostWeight > 0)
+            {
+                <h5>Travel costs</h5>
+                <TravelCostTableComponent TravelCost="S.TravelCost" People="@S.People" Locations="@S.Locations" />
+            }
+        </div>
+    </div>
+
+    <h3 class="mt-5">Solve</h3>
+    <div id="solve" class="d-flex justify-content-between mb-2">
+        <div class="mt-3">
+            <span>Use: </span>
+            <input type="checkbox" name="ilp" id="ilp" @bind="@_ilpChecked">
+            <label for="ilp">ILP solver</label>
+
+            <input type="checkbox" name="sat" id="sat" @bind="@_satChecked">
+            <label for="sat">SAT solver</label>
+        </div>
+
+        <div>
+            <label for="timeLimit">Time limit: </label>
+            <input type="number" name="timeLimit" id="timeLimit" @bind="@_timeLimit" min="1" class="timeLimit">
+            <span>s</span>
+
+            <input type="button" value="Solve" class="btn btn-info" @onclick="Solve">
+        </div>
+    </div>
+    @if (_ilpSolved)
+    {
+        <h5 class="mt-4">Solution with ILP solver</h5>
+        <div>
+            Result: @_ilpResult.Item1 <br>
+            Time: @_ilpResult.Item3 seconds
+        </div>
+        <div id="ilp-solution" class="mt-3">
+            <div class="mb-2">
+                @for (var locationId = 0; locationId < S.Locations.Count; locationId++)
+                {
+                    var currentLocationId = locationId;
+                    <input type="button" value="@S.Locations[locationId].Name"
+                class="btn @((currentLocationId == _ilpCurrentLocationId) ? "btn-secondary" : "btn-outline-secondary")"
+                @onclick="() => { _ilpCurrentLocationId = currentLocationId; }">
+                }
+            </div>
+
+            @for (var locationId = 0; locationId < S.Locations.Count; locationId++)
+            {
+                <SolutionTableComponent S="@S" result="@_ilpResult" LocationId="locationId"
+            CurrentLocationId="_ilpCurrentLocationId" />
+            }
+        </div>
+    }
+
+    @if (_satSolved)
+    {
+        <h5 class="mt-4">Solution with SAT solver</h5>
+        <div>
+            Result: @_satResult.Item1 <br>
+            Time: @_satResult.Item3 seconds
+        </div>
+        <div id="sat-solution" class="mt-3">
+            <div class="mb-2">
+                @for (var locationId = 0; locationId < S.Locations.Count; locationId++)
+                {
+                    var currentLocationId = locationId;
+                    <input type="button" value="@S.Locations[locationId].Name"
+                class="btn @((currentLocationId == _satCurrentLocationId) ? "btn-secondary" : "btn-outline-secondary")"
+                @onclick="() => { _satCurrentLocationId = currentLocationId; }">
+                }
+            </div>
+
+            @for (var locationId = 0; locationId < S.Locations.Count; locationId++)
+            {
+                <SolutionTableComponent S="@S" result="@_satResult" LocationId="locationId"
+            CurrentLocationId="_satCurrentLocationId" />
+            }
+        </div>
+    }
+
+    @if (_infeasible)
+    {
+        <div class="mt-3">
+            <div class="mb-2">
+                <label>Model is Infeasible</label>
+            </div>
+        </div>
+    }
+    @if (_timeout)
+    {
+        <div class="mt-3">
+            <div class="mb-2">
+                <label>No Solution found before timeout</label>
+            </div>
+        </div>
+    }
+</div>
+
+@code
+{
+    [Parameter]
+    public Scenario? S { get; set; }
+
+    private bool _ilpChecked = true;
+    private bool _satChecked = true;
+    private int _timeLimit = 10;
+
+    private (int, bool[][][][], string) _ilpResult;
+    private (int, bool[][][][], string) _satResult;
+    private bool _ilpIsSolving = false;
+    private bool _satIsSolving = false;
+    private bool _ilpSolved = false;
+    private bool _satSolved = false;
+
+    private bool _infeasible = false;
+    private bool _timeout = false;
+
+    private int _ilpCurrentLocationId = 0;
+    private int _satCurrentLocationId = 0;
+
+    private void Solve()
+    {
+        try
+        {
+            if (_ilpChecked)
+            {
+                _ilpIsSolving = true;
+                ISolver ilp = new ILPSolver(S, _timeLimit);
+                _ilpResult = ilp.Optimize();
+                _ilpSolved = true;
+            }
+            if (_satChecked)
+            {
+                _satIsSolving = true;
+                ISolver sat = new SATSolver(S, _timeLimit);
+                _satResult = sat.Optimize();
+                _satSolved = true;
+            }
+        }
+        catch (InfeasibleException e)
+        {
+            _infeasible = true;
+        }
+        catch (TimeoutException e)
+        {
+            _timeout = true;
+        }
+
+    }
+}

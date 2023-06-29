@@ -1,0 +1,150 @@
+﻿@using SchedulingProblem.Model
+@using Microsoft.AspNetCore.Components
+@using System.ComponentModel.DataAnnotations
+<tr>
+    <td>
+        <input type="text" name="taskId" id="taskId" value="@Task.Id" disabled>
+    </td>
+    <td>
+        <input type="text" id="taskDescription" @bind-value="@Task.Description"
+            placeholder='Ex. "Presentation about .."'>
+    </td>
+    @if (HasRepetitions)
+    {
+        <td>
+            <input type="number" id="taskRepetitions" @bind-value="@Task.Reps" min="1">
+        </td>
+    }
+    @if (PrefNrOfPeopleWeight > 0)
+    {
+	    <td>
+		    <input type="number" id="taskPreferredNumberOfPeople" @bind-value="@Task.PrefPpl" min="1">
+	    </td>
+    }
+    @if (HasReqNrOfPpl)
+        {
+        <td>
+        <input type="number" id="taskRequiredNumberOfPeople" @bind-value="@Task.ReqPpl" min="1">
+        </td>
+        }
+    @if (HasReqPeople)
+    {
+        <td>
+            <input type="text" id="taskRequiredSpecificPeople" @bind-value="@RequiredSpecificPeople"
+            placeholder='Ex. "0, 4, 9"'>
+        </td>
+    }
+    @if (HasReqTS)
+    {
+        <td>
+            <input type="text" id="taskRequiredSpecificTimeSlots" @bind-value="@RequiredSpecificTimeSlots"
+            placeholder='Ex. "0, 4, 9"'>
+        </td>
+    }
+    @if (HasReqLoc)
+    {
+        <td>
+            <input type="text" id="taskRequiredSpecificLocations" @bind-value="@RequiredSpecificLocations"
+            placeholder='Ex. "0, 4, 9"'>
+        </td>
+    }
+    @if (HasSkills)
+    {
+        <td>
+            <input type="text" id="taskRequiredNumberOfPeople" @bind-value="@Skills" placeholder='Ex. "0, 4, 9"'>
+        </td>
+    }
+
+    <td>
+        <input type="button" id="taskDelete" class="btn btn-danger" value="x"
+            @onclick="() => DeleteMethod.InvokeAsync(Task.Id)">
+    </td>
+</tr>
+
+@code {
+    [Parameter] public SchedulingTask? Task { get; set; }
+    [Parameter] public EventCallback<int> DeleteMethod { get; set; }
+    [Parameter] public bool HasRepetitions { get; set; }
+    [Parameter] public int PrefNrOfPeopleWeight { get; set; }
+    [Parameter] public bool HasReqNrOfPpl { get; set; }
+    [Parameter] public bool HasReqPeople { get; set; }
+    [Parameter] public bool HasReqTS { get; set; }
+    [Parameter] public bool HasReqLoc { get; set; }
+    [Parameter] public bool HasSkills { get; set; }
+
+    [RegularExpression(@"[0 - 9] +\.?[0-9,]*")]
+    public string RequiredSpecificPeople
+    {
+        get => String.Join(",", Task.ReqSpecPpl.Select(s => s.ToString()));
+        set
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                var s = value.Split(',');
+                var l = new int[s.Length];
+                for (int i = 0; i < s.Length; i++)
+                {
+                    l[i] = Int32.Parse(s[i]);
+                }
+                Task.ReqSpecPpl = l;
+            }
+        }
+    }
+
+    [RegularExpression(@"[0 - 9] +\.?[0-9,]*")]
+    public string RequiredSpecificTimeSlots
+    {
+        get => String.Join(",", Task.ReqSpecTS.Select(s => s.ToString()));
+        set
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                var s = value.Split(',');
+                var l = new int[s.Length];
+                for (int i = 0; i < s.Length; i++)
+                {
+                    l[i] = Int32.Parse(s[i]);
+                }
+                Task.ReqSpecTS = l;
+            }
+        }
+    }
+
+    [RegularExpression(@"[0 - 9] +\.?[0-9,]*")]
+    public string RequiredSpecificLocations
+    {
+        get => String.Join(",", Task.ReqSpecLoc.Select(s => s.ToString()));
+        set
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                var s = value.Split(',');
+                var l = new int[s.Length];
+                for (int i = 0; i < s.Length; i++)
+                {
+                    l[i] = Int32.Parse(s[i]);
+                }
+                Task.ReqSpecLoc = l;
+            }
+        }
+    }
+
+    [RegularExpression(@"[0 - 9] +\.?[0-9,]*")]
+    public string Skills
+    {
+        get => String.Join(",", Task.Skills.Select(s => s.ToString()));
+        set
+        {
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                var s = value.Split(',');
+                var l = new int[s.Length];
+                for (int i = 0; i < s.Length; i++)
+                {
+                    l[i] = Int32.Parse(s[i]);
+                }
+                Task.Skills = l;
+            }
+        }
+    }
+}

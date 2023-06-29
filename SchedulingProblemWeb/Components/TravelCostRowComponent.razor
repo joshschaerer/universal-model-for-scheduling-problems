@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Components
+@using SchedulingProblem.Model
+
+<tr>
+	<th scope="row" style="position: sticky; left: 0; z-index: 1; background-color: white;">@Person.Name</th>
+	@foreach (var location in Locations)
+	{
+		<td>
+			<input type="text" id="travelCost" @bind-value="@TravelCost[Person.Id, location.Id]">
+		</td>
+	}
+</tr>
+
+@code {
+	[Parameter] public int[,] TravelCost { get; set; }
+	[Parameter] public Person Person { get; set; }
+	[Parameter] public List<Location> Locations { get; set; }
+}

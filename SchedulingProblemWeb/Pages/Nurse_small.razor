@@ -1,0 +1,20 @@
+@using SchedulingProblem.Scenarios
+@using SchedulingProblem.Model
+@using SchedulingProblemWeb.Components
+@page "/smallnurse"
+<PageTitle>Test Example</PageTitle>
+
+<h2>Nurse Small</h2>
+
+<ScenarioComponent S="@S" />
+
+@code {
+
+
+
+
+
+
+
+    private Scenario S = JSONParser.GetNurseSmall();
+}

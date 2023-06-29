@@ -1,0 +1,68 @@
+﻿@using SchedulingProblem.Model
+
+<div class="table-responsive">
+    <table class="table w-auto">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+	            <th scope="col">Name</th>
+                @if (WorkloadWeight > 0)
+                {
+	                <th scope="col">Workload</th>
+                }
+                @if (HasAbsences)
+                {
+                    <th scope="col">Absences</th>
+                }
+                @if (HasSkills)
+                {
+                    <th scope="col">Skills</th>
+                }
+                @if (WageWeight > 0)
+                {
+	                <th scope="col">Wage</th>
+                }
+                @if (HasCapacity)
+                {
+                    <th scope="col">Capacity</th>
+                }
+                <th class="col-1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in People)
+            {
+                <PersonTableRowComponent Person="person" DeleteMethod="DeletePerson" WorkloadWeight="@WorkloadWeight" HasAbsences="@HasAbsences"
+                WageWeight="@WageWeight" HasCapacity="@HasCapacity" HasSkills="@HasSkills" />
+            }
+            <tr>
+                <td>
+                    <input type="button" id="personAdd" class="btn btn-success" value="+" @onclick="AddPerson">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@code {
+    [Parameter] public List<Person>? People { get; set; }
+    [Parameter] public int WorkloadWeight { get; set; }
+
+    [Parameter] public bool HasAbsences { get; set; }
+    [Parameter] public int WageWeight { get; set; }
+
+    [Parameter] public bool HasCapacity { get; set; }
+
+    [Parameter] public bool HasSkills { get; set; }
+
+    private void AddPerson()
+    {
+        People.Add(new Person(People.Count, "", 100, new int[] { }, new int[] { }, 1, 1));
+    }
+
+    private void DeletePerson(int id)
+    {
+        People.Remove(People.First(p => p.Id == id));
+    }
+
+}
